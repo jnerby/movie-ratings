@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Movie Ratings Home{% endblock %}
+
+{% block body %}
+  <h1>Welcome!</h1>
+
+  <h2>Rate</h2>
+
+  <h2>Enter the movie and the rating</h2>
+  <form action="/rate" method="POST">
+    <p>
+      Movie Name <input type="text" name="movie">
+    </p>
+
+    <p>
+      Rating <input type="integer" name="rating">
+    </p>
+
+    <p>
+      <input type="submit">
+    </p>
+  </form>
+{% endblock %}

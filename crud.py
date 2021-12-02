@@ -35,6 +35,10 @@ def get_movie_by_id(movie_id):
     """Getting movie obj from id"""
     return Movie.query.get(movie_id)
 
+def get_movie_by_title(title):
+    """Getting movie obj from title"""
+    return Movie.query.filter_by(title=title).first()
+
 def get_user_by_id(user_id):
     """Getting user obj from id"""
     return User.query.get(user_id)
@@ -49,6 +53,10 @@ def create_rating(user, movie, score):
     db.session.commit()
     
     return rat
+
+def get_user_by_email(email):
+    """Getting user obj from id"""
+    return User.query.filter_by(email=email).first()
 
 if __name__ == '__main__':
     from server import app
