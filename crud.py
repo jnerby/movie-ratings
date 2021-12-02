@@ -23,6 +23,22 @@ def create_movie(title, overview, release_date, poster_path):
 
     return movie
 
+def return_all_movies():
+    """Return all movies from DB"""
+    return Movie.query.all()
+
+def return_all_users():
+    """Return all users from DB"""
+    return User.query.all()
+
+def get_movie_by_id(movie_id):
+    """Getting movie obj from id"""
+    return Movie.query.get(movie_id)
+
+def get_user_by_id(user_id):
+    """Getting user obj from id"""
+    return User.query.get(user_id)
+
 def create_rating(user, movie, score):
                         # instance of movie, instance of user
                         # movie 1, user1
